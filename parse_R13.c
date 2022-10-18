@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * parse_R13 - substitute %R by argument number in rot13
  * @buff_dest: string to change
@@ -14,7 +13,6 @@ int parse_R13(char *buff_dest, va_list arg, int buff_count)
 	char *keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *keynew = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i, j = 0;
-
 
 	str = va_arg(arg, char *);
 	while (str[j])
@@ -30,7 +28,6 @@ int parse_R13(char *buff_dest, va_list arg, int buff_count)
 		}
 		j++, buff_count++;
 	}
-
 
 	return (buff_count);
 }
